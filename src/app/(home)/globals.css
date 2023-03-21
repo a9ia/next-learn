@@ -10,7 +10,10 @@
 }
 
 .section-body {
-  @apply px-6 w-full;
+  @apply px-10 w-full flex justify-center;
+}
+.section-body .contain-body {
+  @apply max-w-[1350px] w-full h-full;
 }
 
 /* @media (prefers-color-scheme: dark) {

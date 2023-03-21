@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from "react";
-import { Select, FormControl, MenuItem, Button, TextField } from "@mui/material"
-import { SelectChangeEvent } from '@mui/material/Select'
+import { MenuItem } from "@mui/material"
 import SearchIcon from '@mui/icons-material/Search';
+import MuiButton from "@/components/ui-kits/MuiButton";
+import MuiTextField from "@/components/ui-kits/MuiTextField";
 
 export default function SearchInput() {
   const [filter, setFilter] = useState('All Filter');
@@ -16,36 +17,45 @@ export default function SearchInput() {
     'Labels',
     'Websites'
   ]
-  const handleSelectChange = (event: SelectChangeEvent) => {
+  const handleSelectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event);
     setFilter(event.target.value);
   };
   const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event);
-    console.log(input)
+    // console.log(input)
     setInput(event.target.value);
   };
+  const handleButton = () => {
+    console.log(input)
+  }
   return (
-    <div className="flex">
+    <div className="flex bg-white rounded-md h-[45px] items-center px-2">
       {/* <button>{textContent[filter]}</button> */}
-      <FormControl sx={{minWidth: 150 }} className="mr-2">
-        <Select
+      {/* <FormControl sx={{minWidth: 120 }} className="mr-2 max-md:hidden" size="small">
+        
+      </FormControl> */}
+      <MuiTextField
+          select
           value={filter}
+          size="small"
           onChange={handleSelectChange}
-          inputProps={{ 'aria-label': 'Without label' }}
-        >{textContent.map((value:string, index:number) => {
-          return <MenuItem key={index} value={value}>{value}</MenuItem>
-        })}</Select>
-      </FormControl>
-      <TextField
+          className="mr-1 min-w-[128px]"
+        >
+          {textContent.map((value:string, index:number) => {
+            return <MenuItem key={index} value={value}>{value}</MenuItem>
+          })}
+        </MuiTextField>
+      <MuiTextField
         value={input}
         onChange={handleTextChange}
-        label="Search by Address / Txn Hash / Block / Token / Domain Name"
-        className="w-[500px]"
+        placeholder="Search by Address / Txn Hash / Block / Token / Domain Name"
+        className="flex-grow"
+        size="small"
       />
-      <Button variant="outlined" className="ml-2">
+      <MuiButton variant="contained" className="ml-2" onClick={handleButton} >
         <SearchIcon/>
-      </Button>
+      </MuiButton>
     </div>
   )
 }
