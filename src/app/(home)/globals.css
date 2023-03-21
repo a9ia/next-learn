@@ -9,6 +9,14 @@
   --g-foreground-rgb: 29, 33, 41;
 }
 
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: black;
+}
+
 .section-body {
   @apply px-10 w-full flex justify-center;
 }

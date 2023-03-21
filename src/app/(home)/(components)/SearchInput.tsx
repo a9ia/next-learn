@@ -30,7 +30,7 @@ export default function SearchInput() {
     console.log(input)
   }
   return (
-    <div className="flex bg-white rounded-md h-[45px] items-center px-2">
+    <div className="flex bg-white rounded-xl h-[45px] items-center px-2">
       {/* <button>{textContent[filter]}</button> */}
       {/* <FormControl sx={{minWidth: 120 }} className="mr-2 max-md:hidden" size="small">
         
@@ -40,7 +40,7 @@ export default function SearchInput() {
           value={filter}
           size="small"
           onChange={handleSelectChange}
-          className="mr-1 min-w-[128px]"
+          className="mr-1 min-w-[128px] max-md:hidden"
         >
           {textContent.map((value:string, index:number) => {
             return <MenuItem key={index} value={value}>{value}</MenuItem>

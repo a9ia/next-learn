@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     backgroundColor: theme => ({
       ...theme('colors'),
-      'blackBlue': 'rgb(17, 27, 54)'
+      'blackBlue': 'rgb(17, 27, 54)',
+      'littleGrey': 'rgb(233, 236, 239)',
     }),
     extend: {},
   },
