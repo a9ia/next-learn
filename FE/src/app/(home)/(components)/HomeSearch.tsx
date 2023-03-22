@@ -7,7 +7,7 @@ export default function HomeSearch() {
     <section className="section-body h-[300px] bg-blackBlue">
       <section className="contain-body  flex items-center">
         <div className="text-white flex-grow max-w-[700px]">
-          <div className="mb-5 text-2xl">The Ethereum Blockchain Explorer</div>
+          <h1 className="mb-5 text-2xl">The Ethereum Blockchain Explorer</h1>
           <SearchInput/>
         </div>
         <div></div>

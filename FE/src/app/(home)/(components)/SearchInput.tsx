@@ -18,12 +18,9 @@ export default function SearchInput() {
     'Websites'
   ]
   const handleSelectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // console.log(event);
     setFilter(event.target.value);
   };
   const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // console.log(event);
-    // console.log(input)
     setInput(event.target.value);
   };
   const handleButton = () => {
@@ -31,10 +28,6 @@ export default function SearchInput() {
   }
   return (
     <div className="flex bg-white rounded-xl h-[45px] items-center px-2">
-      {/* <button>{textContent[filter]}</button> */}
-      {/* <FormControl sx={{minWidth: 120 }} className="mr-2 max-md:hidden" size="small">
-        
-      </FormControl> */}
       <MuiTextField
           select
           value={filter}

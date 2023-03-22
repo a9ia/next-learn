@@ -5,7 +5,7 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --g-background-rgb: 246, 248, 250;
+  --g-background-rgb: 253, 253, 254;
   --g-foreground-rgb: 29, 33, 41;
 }
 
@@ -18,10 +18,14 @@
 }
 
 .section-body {
-  @apply px-10 w-full flex justify-center;
+  @apply px-3 w-full flex justify-center;
 }
 .section-body .contain-body {
   @apply max-w-[1350px] w-full h-full;
+}
+.card-white {
+  @apply bg-white rounded-xl shadow-lg;
+  border: 1px solid rgb(229,231,235);
 }
 
 /* @media (prefers-color-scheme: dark) {
