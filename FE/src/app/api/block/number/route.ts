@@ -1,4 +1,4 @@
-import { fetcher, RequestBody } from "../../../../api/main"
+import { fetcher } from "../../../../api/main"
 
 import { NextResponse } from 'next/server';
 
